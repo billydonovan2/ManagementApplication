@@ -11,9 +11,9 @@ package managementapplication;
  */
 public class Appointment {
     private String description;
-    private int year;
-    private int month;
-    private int day;
+    int month;
+    int day;
+    int year;
 
     /**
      * Initializes appointment for a given date.
@@ -23,11 +23,11 @@ public class Appointment {
      * @param day the day
      * @param description the text description of the appointment
      */
-    public Appointment(int year, int month, int day, String description) {
-        this.year = year;
+    public Appointment(String description, int month, int day, int year) {
+        this.description = description;
         this.month = month;
         this.day = day;
-        this.description = description;
+        this.year = year;
     }
 
     /**
@@ -35,27 +35,21 @@ public class Appointment {
      *
      * @return the year
      */
-    public int getYear() {
-        return year;
-    }
+   
 
     /**
      * Returns the month of the appointment.
      *
      * @return the month
      */
-    public int getMonth() {
-        return month;
-    }
+   
 
     /**
      * Returns the day of the appointment.
      *
      * @return the day
      */
-    public int getDay() {
-        return day;
-    }
+    
 
     /**
      * Determines if the appointment is on the date given.
@@ -65,16 +59,17 @@ public class Appointment {
      * @param day the day to check
      * @return true if the appointment matches all three parameters
      */
-    public boolean occursOn(int year, int month, int day) {
-        return (year == this.year) && (month == this.month) && (day == this.day);
+    public boolean occursOn(int month, int day, int year) {
+         return (this.month == month && this.day == day && this.year == year);
     }
+    public String returnDescription()
+    {
+        return description;
 
     /**
      * Converts appointment to string description.
      */
-    @Override
-    public String toString() {
-        return description;
+   
     }
 }
     
