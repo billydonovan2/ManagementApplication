@@ -4,12 +4,13 @@
  * and open the template in the editor.
  */
 package managementapplication;
-
+import java.util.GregorianCalendar;
 /**
  *
  * @author billy
  */
 public class Monthly extends Appointment {
+     GregorianCalendar calendar = new GregorianCalendar();
     /**
      * Initializes appointment for a given date.
      *
@@ -18,9 +19,44 @@ public class Monthly extends Appointment {
      * @param day the day
      * @param description the text description of the appointment
      */
-    public Monthly(int year, int month, int day, String description) {
-        super(year, month, day, description);
+    public Monthly(String description, int month, int day, int year) {
+        super(description, month, day, year);
     }
+     public boolean occursOn(int month, int day, int year)
+    {
+        boolean print = false;
+        if (this.day == day && this.year <= year)
+        {
+            if (this.year == year)
+            {
+                if (this.month <= month)
+                {
+                    if (this.month == month)
+                    {
+                        if (this.day <= day)
+                        {
+                            print = true;
+                        }
+                    }
+                    else
+                    {
+                        print = true;
+                    }
+                }
+                else
+                {
+                    print = true;
+                }
+            }
+            else
+            {
+                print = true;
+            }
+        }
+        return print;
+    }
+}
+
 
     /**
      * Determines if the appointment occurs on the same day of the month.
@@ -31,15 +67,5 @@ public class Monthly extends Appointment {
      * @return true if day matches the appointment date and is later than the
      * base appointment
      */
-    @Override
-    public boolean occursOn(int year, int month, int day) {
-        if (year < getYear()) {
-            return false;
-        }
-        if (month < getMonth() && year == getYear()) {
-            return false;
-        }
-        return day == getDay();
-    }
-}
+    
     
