@@ -4,12 +4,13 @@
  * and open the template in the editor.
  */
 package managementapplication;
-
+import java.util.GregorianCalendar;
 /**
  *
  * @author billy
  */
 public class Daily extends Appointment {
+    GregorianCalendar calendar = new GregorianCalendar();
     /**
      * Initializes appointment for a given date.
      *
@@ -18,8 +19,8 @@ public class Daily extends Appointment {
      * @param day the day
      * @param description the text description of the appointment
      */
-    public Daily(int year, int month, int day, String description) {
-        super(year, month, day, description);
+    public Daily(String description, int month, int day, int year) {
+        super(description, month, day, year);
     }
 
     /**
@@ -31,21 +32,36 @@ public class Daily extends Appointment {
      * @return true if base appointment is earlier than the appointment date
      */
     @Override
-    public boolean occursOn(int year, int month, int day) {
-        if (year > getYear()) {
-            return true;
-        }
-        if (year == getYear()) {
-            if (month > getMonth()) {
-                return true;
-            }
-            if (month == getMonth()) {
-                if (day >= getDay()) {
-                    return true;
+    public boolean occursOn(int month, int day, int year) {
+         boolean print = false;
+ 
+            if (this.year == year)
+            {
+                if (this.month <= month)
+                {
+                    if (this.month == month)
+                    {
+                        if (this.day <= day)
+                        {
+                            print = true;
+                        }
+                    }
+                    else
+                    {
+                        print = true;
+                    }
+                }
+                else
+                {
+                    print = true;
                 }
             }
-        }
-        return false;
+            else
+            {
+                print = true;
+            }
+        
+        return print;
+    
     }
 }
-    
