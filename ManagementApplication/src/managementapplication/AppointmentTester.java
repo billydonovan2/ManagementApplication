@@ -1,6 +1,6 @@
 /* *******************************************************
 * Student: [Bill Donovan]
-* Email: [wfd5035@psu.edu]
+* Email: [nvc5183@psu.edu]
 * Project: [Management Application]
 * *******************************************************/
 package managementapplication;
@@ -24,7 +24,7 @@ public class AppointmentTester {
         {
             if (command.equals("y"))
             {
-                System.out.println("--YOUR APPOINTMENT CALENDAR-- \n");
+                System.out.println("--YOUR APPOINTMENT CALENDAR-- \n");// can use \n and ln a the same time !!!
                 System.out.println("Please give date(mm dd yyyy): ");
                 int month1 = in.nextInt();
                 int day1 = in.nextInt();
