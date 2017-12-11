@@ -1,2 +1,2 @@
 # ManagementApplication
-An application that manages appointments, events and reminders. The application allows a user to enter various appointments and then later on, search either by date or appointment type.  
+This java program was developed by Bill Donovan, Nelson Costa, and Andrew Kim. This program enables the user to set events and appointments on specific dates. The events and appointments can either be a one-time, daily, monthly, or yearly occurrence. By choosing a date, the program will list out all of the appointments of that day accordingly. In order to run this program, run the AppointmentTester.java file. When entering a date, please ensure that it’s a date in the future. Also ensure the format of the date is as follows: 11 8 2018.
