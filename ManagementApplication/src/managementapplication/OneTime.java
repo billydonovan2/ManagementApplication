@@ -1,8 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/* *******************************************************
+* Student: [Andrew Kim]
+* Project: [Management Application]
+* *******************************************************/
 package managementapplication;
 import java.util.GregorianCalendar;
 public class OneTime extends Appointment
@@ -18,7 +17,4 @@ public class OneTime extends Appointment
         return (this.month == month && this.day == day && this.year == year && calendar.get(calendar.YEAR) >= year);
     }
 }
-/**
- *
- * @author billy
- */
+

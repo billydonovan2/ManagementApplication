@@ -1,17 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/* *******************************************************
+* Student: [Bill Donovan]
+* Email: [wfd5035@psu.edu]
+* Project: [Management Application]
+* *******************************************************/
 package managementapplication;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Scanner;
 import java.util.GregorianCalendar;
-/**
- *
- * @author billy
- */
+
 public class AppointmentTester {
      public static void main(String[]args)
     {
@@ -27,7 +24,7 @@ public class AppointmentTester {
         {
             if (command.equals("y"))
             {
-                System.out.println("--YOUR APPOINTMENT CALENDAR-- \n");// can use \n and ln a the same time !!!
+                System.out.println("--YOUR APPOINTMENT CALENDAR-- \n");
                 System.out.println("Please give date(mm dd yyyy): ");
                 int month1 = in.nextInt();
                 int day1 = in.nextInt();

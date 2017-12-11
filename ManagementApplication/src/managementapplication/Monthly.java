@@ -1,14 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/* *******************************************************
+* Student: [Bill Donovan]
+* Email: [wfd5035@psu.edu]
+* Project: [Management Application]
+* *******************************************************/
 package managementapplication;
 import java.util.GregorianCalendar;
-/**
- *
- * @author billy
- */
+
 public class Monthly extends Appointment {
      GregorianCalendar calendar = new GregorianCalendar();
     /**

@@ -1,14 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/* *******************************************************
+* Student: [Bill Donovan]
+* Email: [wfd5035@psu.edu]
+* Project: [Management Application]
+* *******************************************************/
 package managementapplication;
 import java.util.GregorianCalendar;
-/**
- *
- * @author billy
- */
+
 public class Daily extends Appointment {
     GregorianCalendar calendar = new GregorianCalendar();
     /**
@@ -23,14 +20,7 @@ public class Daily extends Appointment {
         super(description, month, day, year);
     }
 
-    /**
-     * Determines if the date is later than the appointment date
-     *
-     * @param year the year
-     * @param month the month
-     * @param day the day
-     * @return true if base appointment is earlier than the appointment date
-     */
+    
     @Override
     public boolean occursOn(int month, int day, int year) {
          boolean print = false;
