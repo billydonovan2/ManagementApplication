@@ -4,6 +4,7 @@
 * *******************************************************/
 package managementapplication;
 import java.util.GregorianCalendar;
+import managementapplication.Appointment;
 public class OneTime extends Appointment
 {
     GregorianCalendar calendar = new GregorianCalendar();
@@ -14,7 +15,7 @@ public class OneTime extends Appointment
 
     public boolean occursOn(int month, int day, int year)
     {
-        return (this.month == month && this.day == day && this.year == year && calendar.get(calendar.YEAR) >= year);
+        return (this.month == month && this.day == day && this.year == year && calendar.get(GregorianCalendar.YEAR) >= year);
     }
 }
 
